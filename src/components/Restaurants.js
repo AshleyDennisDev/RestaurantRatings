@@ -1,3 +1,4 @@
+import { Card } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import BasicRating from "./Ratings";
 
@@ -17,14 +18,16 @@ export default function GetRestaurants() {
         <div>
           <ul>
           {restaurants.map((restaurant) => {
-            return <li>
+            return <>
+            <Card className="card" variant="outlined">
                 <h2>{restaurant.name}</h2>
                 <img src={restaurant.photoUrl} />
                 <BasicRating 
                 rating={restaurant.rating} 
                 id={restaurant.id}
                 setRestaurants={setRestaurants}/>
-            </li>
+                </Card>
+            </>
           })}
           </ul>
         </div>

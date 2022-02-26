@@ -1,12 +1,10 @@
 import React from 'react';
 import './App.css';
 import Restaurants from './components/Restaurants';
-import BasicRating from "./components/Ratings";
-
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <header>My restaurants</header>
     <Restaurants/>
     </div>
